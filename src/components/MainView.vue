@@ -1,8 +1,8 @@
 <template>
   <div id="main-view" class="main-view">
-    <List></List>
-    <!-- <OfficeInspection></OfficeInspection>
-    <OnSiteInspection></OnSiteInspection> -->
+    <!-- <List></List> -->
+    <!-- <OfficeInspection></OfficeInspection> -->
+    <OnSiteInspection></OnSiteInspection>
   </div>
 </template>
 

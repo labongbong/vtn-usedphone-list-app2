@@ -11,5 +11,9 @@ export default {
 </script>
 
 <style>
-
+.office-inspection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 </style>
