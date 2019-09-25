@@ -1,0 +1,30 @@
+<template>
+  <div id="main-view" class="main-view">
+    <List></List>
+    <!-- <OfficeInspection></OfficeInspection>
+    <OnSiteInspection></OnSiteInspection> -->
+  </div>
+</template>
+
+<script>
+import List from "./mainview/List.vue";
+import OfficeInspection from "./mainview/OfficeInspection.vue";
+import OnSiteInspection from "./mainview/OnSiteInspection.vue";
+
+export default {
+  name: "main-view",
+  components: {
+    List: List,
+    OfficeInspection:OfficeInspection,
+    OnSiteInspection:OnSiteInspection
+  }
+};
+</script>
+
+<style>
+.main-view {
+  width: 100vw;
+  height: 10000px;
+  margin: 50px 20px;
+}
+</style>
