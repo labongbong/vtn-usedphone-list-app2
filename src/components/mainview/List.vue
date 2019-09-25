@@ -16,6 +16,7 @@
     <div class="show-list">
       <div class="show-list-top">
         <div class="show-list__filters">
+          <input class="filters__filter" placeholder="Stock No." />
           <input class="filters__filter" placeholder="IMEI" />
           <input class="filters__filter" placeholder="Status" />
           <input class="filters__filter" placeholder="Store" />
@@ -149,6 +150,7 @@ export default {};
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .filters__filter {
@@ -160,7 +162,24 @@ export default {};
   padding: 5px;
 }
 
-.table__content {
-  border: 1px solid #593d90;
+.filters__filter:focus {
+  outline: 2px solid #593d90;
 }
+
+.table__content {
+  border: 2px solid #593d90;
+  width: 100%;
+}
+
+.table__content td,
+.table__content th {
+  border: 1px solid #8C8C8C;
+  padding: 5px;
+  text-align: center;
+}
+
+.table__content th {
+  border-bottom: 1px solid #593d90;
+}
+
 </style>

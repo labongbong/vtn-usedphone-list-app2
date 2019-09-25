@@ -24,7 +24,7 @@ export default {
 <style>
 .main-view {
   width: 100vw;
-  height: 10000px;
-  margin: 50px 20px;
+  height: 100vh;
+  padding: 50px 20px 50px 20px;
 }
 </style>
