@@ -69,4 +69,9 @@ table {
 	border-spacing: 0;
 }
 
+button {
+  outline: none;
+  cursor: pointer;
+}
+
 </style>
