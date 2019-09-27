@@ -2,7 +2,10 @@
   <div id="main-view" class="main-view">
     <!-- <List></List> -->
     <!-- <OfficeInspection></OfficeInspection> -->
-    <OnSiteInspection></OnSiteInspection>
+    <!-- <OnSiteInspection></OnSiteInspection> -->
+    <!-- <LoginModal></LoginModal> -->
+    <IspTest></IspTest>
+    
   </div>
 </template>
 
@@ -10,13 +13,17 @@
 import List from "./mainview/List.vue";
 import OfficeInspection from "./mainview/OfficeInspection.vue";
 import OnSiteInspection from "./mainview/OnSiteInspection.vue";
+import LoginModal from "./LoginModal.vue";
+import IspTest from "./mainview/IspTest.vue";
 
 export default {
   name: "main-view",
   components: {
     List: List,
     OfficeInspection:OfficeInspection,
-    OnSiteInspection:OnSiteInspection
+    OnSiteInspection:OnSiteInspection,
+    LoginModal:LoginModal,
+    IspTest:IspTest
   }
 };
 </script>

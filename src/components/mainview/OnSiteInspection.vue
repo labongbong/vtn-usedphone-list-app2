@@ -3,41 +3,41 @@
     <div class="on-site-inspection__name">Item Info</div>
     <div class="info__IMEI">
       <div>IMEI</div>
-      <input placeholder="IMEI" />
+      <input placeholder="IMEI" autofocus />
       <button>search</button>
     </div>
     <div class="on-site-inspection__info">
       <div class="info__data">
-        <div class="data__name">검사코드</div>
-        <div class="data__content">V20190906077483</div>
+        <div class="data__name">IMEI</div>
+        <div class="data__content"></div>
+      </div>
+      <div class="info__data">
+        <div class="data__name">신청번호</div>
+        <div class="data__content">V20190901070249</div>
+      </div>
+      <div class="info__data">
+        <div class="data__name">판매신청일</div>
+        <div class="data__content">2019-09-06 08:48:00.0</div>
       </div>
       <div class="info__data">
         <div class="data__name">제품군</div>
         <div class="data__content">스마트폰</div>
       </div>
       <div class="info__data">
-        <div class="data__name">신청일시</div>
-        <div class="data__content">2019-09-06 08:48:00.0</div>
-      </div>
-      <div class="info__data">
         <div class="data__name">제조사</div>
-        <div class="data__content">APPLE</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">유통점명</div>
-        <div class="data__content">FPT</div>
+        <div class="data__content">SAMSUNG</div>
       </div>
       <div class="info__data">
         <div class="data__name">모델명</div>
-        <div class="data__content">iPhone 7 Plus_32G</div>
+        <div class="data__content">Galaxy Note 5</div>
+      </div>
+      <div class="info__data">
+        <div class="data__name">펫네임</div>
+        <div class="data__content">SM-N920C</div>
       </div>
       <div class="info__data">
         <div class="data__name">대리점명</div>
-        <div class="data__content">FPT Shop</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name"></div>
-        <div class="data__content"></div>
+        <div class="data__content">FTP Shop</div>
       </div>
       <div class="info__data">
         <div class="data__name"></div>
@@ -55,15 +55,15 @@
         <div class="list__answer">
           <div>
             <input type="checkbox" />
-            <span>정상</span>
+            <span>Y</span>
           </div>
           <div>
             <input type="checkbox" />
-            <span>약간 비정상</span>
+            <span>A</span>
           </div>
           <div>
             <input type="checkbox" />
-            <span>매우 비정상</span>
+            <span>N</span>
           </div>
         </div>
       </div>
@@ -72,15 +72,15 @@
         <div class="list__answer">
           <div>
             <input type="checkbox" />
-            <span>정상</span>
+            <span>Y</span>
           </div>
           <div>
             <input type="checkbox" />
-            <span>약간 비정상</span>
+            <span>A</span>
           </div>
           <div>
             <input type="checkbox" />
-            <span>매우 비정상</span>
+            <span>N</span>
           </div>
         </div>
       </div>
@@ -222,6 +222,7 @@ export default {};
 
 .on-site-inspection__inspection {
   position: relative;
+  width: 800px;
 }
 
 .on-site-inspection__name {
@@ -304,10 +305,6 @@ export default {};
   margin-left: 10px;
 }
 
-.on-site-inspection__inspection {
-  width: 800px;
-}
-
 .inspection__list {
   position: relative;
   display: flex;
@@ -369,9 +366,9 @@ export default {};
   font-size: 15px;
   font-weight: 600;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 20px;
   position: absolute;
-  right: 10px;
+  right: 5px;
 }
 
 .inspection__btn:hover {
