@@ -7,41 +7,9 @@
       <button>search</button>
     </div>
     <div class="on-site-inspection__info">
-      <div class="info__data">
-        <div class="data__name">IMEI</div>
-        <div class="data__content"></div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">신청번호</div>
-        <div class="data__content">V20190901070249</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">판매신청일</div>
-        <div class="data__content">2019-09-06 08:48:00.0</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">제품군</div>
-        <div class="data__content">스마트폰</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">제조사</div>
-        <div class="data__content">SAMSUNG</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">모델명</div>
-        <div class="data__content">Galaxy Note 5</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">펫네임</div>
-        <div class="data__content">SM-N920C</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name">대리점명</div>
-        <div class="data__content">FTP Shop</div>
-      </div>
-      <div class="info__data">
-        <div class="data__name"></div>
-        <div class="data__content"></div>
+      <div class="info__data" v-for="info in info_data" v-bind:key="info.name">
+        <div class="data__name">{{info.name}}</div>
+        <div class="data__content">{{info.content}}</div>
       </div>
     </div>
     <div class="on-site-inspection__name">On-site Inspection</div>
@@ -50,156 +18,20 @@
         <div class="inspection__head1">Inspection List</div>
         <div class="inspection__head2">Select Result</div>
       </div>
-      <div class="inspection__list">
-        <div class="list__question">LCD가 정상인가요?</div>
+      <div
+        class="inspection__list"
+        v-for="onsite_inspection in onsite_inspection_data"
+        v-bind:key="onsite_inspection.question"
+      >
+        <div class="list__question">{{ onsite_inspection.question }}</div>
         <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>Y</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>A</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>N</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">외관이 깨끗한가요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>Y</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>A</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>N</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">LCD가 정상인가요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>약간 비정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>매우 비정상</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">LCD가 정상인가요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>약간 비정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>매우 비정상</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">Pen이 들어있나요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>약간 비정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>매우 비정상</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">SIM tray가 있나요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>약간 비정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>매우 비정상</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">외관이 깨끗한가요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>약간 비정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>매우 비정상</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">Back cover가 있나요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>약간 비정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>매우 비정상</span>
-          </div>
-        </div>
-      </div>
-      <div class="inspection__list">
-        <div class="list__question">Back cover가 있나요?</div>
-        <div class="list__answer">
-          <div>
-            <input type="checkbox" />
-            <span>정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>약간 비정상</span>
-          </div>
-          <div>
-            <input type="checkbox" />
-            <span>매우 비정상</span>
+          <div
+            class="answer__content"
+            v-for="onsite_inspection_select in onsite_inspection.selects"
+            v-bind:key="onsite_inspection_select"
+          >
+            <input type="checkbox" v-if="onsite_inspection_select" />
+            <div>{{ onsite_inspection_select }}</div>
           </div>
         </div>
       </div>
@@ -209,20 +41,119 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      info_data: [
+        { name: "IMEI", content: "" },
+        { name: "신청번호", content: "V20190901070249" },
+        { name: "판매신청일", content: "2019-09-06 08:48:00.0" },
+        { name: "제품군", content: "스마트폰" },
+        { name: "제조사", content: "SAMSUNG" },
+        { name: "모델명", content: "Galaxy Note 5" },
+        { name: "펫네임", content: "SM-N920C" },
+        { name: "대리점명", content: "FTP Shop" },
+        { name: "", content: "" }
+      ],
+      onsite_inspection_data: [
+        {
+          question: "LCD가 정상인가요?",
+          selects: {
+            select1: "정상",
+            select2: "약간 비정상",
+            select3: "매우 비정상"
+          }
+        },
+        {
+          question: "외관이 깨끗한가요?",
+          selects: {
+            select1: "정상",
+            select2: "약간 비정상",
+            select3: "매우 비정상"
+          }
+        },
+        {
+          question: "Pen이 있나요?",
+          selects: {
+            select1: "Y",
+            select2: "N",
+            select3: ""
+          }
+        },
+        {
+          question: "USIM Tary가 있나요?",
+          selects: {
+            select1: "Y",
+            select2: "N",
+            select3: ""
+          }
+        },
+        {
+          question: "Back Cover가 있나요?",
+          selects: {
+            select1: "Y",
+            select2: "N",
+            select3: ""
+          }
+        },
+        {
+          question: "TouchID가 정상인가요?",
+          selects: {
+            select1: "정상",
+            select2: "약간 비정상",
+            select3: "매우 비정상"
+          }
+        },
+        {
+          question: "FaceID가 정상인가요?",
+          selects: {
+            select1: "정상",
+            select2: "약간 비정상",
+            select3: "매우 비정상"
+          }
+        },
+        {
+          question: "IRIS가 정상인가요?",
+          selects: {
+            select1: "정상",
+            select2: "약간 비정상",
+            select3: "매우 비정상"
+          }
+        },
+        {
+          question: "Fingerprint?",
+          selects: {
+            select1: "Y",
+            select2: "N",
+            select3: ""
+          }
+        },
+        {
+          question: "USIM Check?",
+          selects: {
+            select1: "Y",
+            select2: "A",
+            select3: "N"
+          }
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style>
 .on-site-inspection {
   position: relative;
-  padding-top: 10px;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 20px 50px 20px;
 }
 
 .on-site-inspection__inspection {
   position: relative;
   width: 800px;
+  padding-bottom: 150px;
 }
 
 .on-site-inspection__name {
@@ -339,6 +270,7 @@ export default {};
   width: 40%;
   height: 30px;
   padding-left: 30px;
+  padding-right: 20px;
   padding-top: 5px;
   display: flex;
   align-items: center;
@@ -348,8 +280,13 @@ export default {};
   width: 60%;
   font-size: 17px;
   align-items: center;
-  justify-content: space-evenly;
   display: flex;
+}
+
+.answer__content {
+  display: flex;
+  padding-left: 30px;
+  width: 150px;
 }
 
 .list__answer input {
@@ -359,7 +296,6 @@ export default {};
 .inspection__btn {
   width: 80px;
   height: 30px;
-  /* background: linear-gradient(to right, #d444b5, #9a8ff3); */
   color: #593d90;
   border: 1px solid #593d90;
   border-radius: 5px;

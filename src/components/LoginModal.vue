@@ -4,6 +4,8 @@
       <div class="top__text">Login</div>
       <i class="fas fa-times"></i>
     </div>
+    <!-- <div class="login__modal-back">
+    </div>-->
     <div class="login__phone">
       <input type="text" class="phone__input" placeholder="Phone Number (except (-))" />
       <button>OK</button>
@@ -23,13 +25,15 @@ export default {};
 .login-modal {
   width: 400px;
   height: 180px;
+  background-color: white;
   border-radius: 10px;
   border: 1px solid #593d90;
   border-image: linear-gradient(to right, #d444b5, #9a8ff3);
   border-image-slice: 1;
   margin: auto;
-  margin-top: 20vh;
+  margin-top: 30vh;
   position: relative;
+  z-index: 200;
 }
 
 .login__head {
@@ -82,4 +86,14 @@ export default {};
 .login-modal input:focus {
   outline: none;
 }
+
+/* .login__modal-back {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  z-index: -1;
+} */
 </style>

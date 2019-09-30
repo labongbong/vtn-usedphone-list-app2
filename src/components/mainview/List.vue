@@ -99,6 +99,11 @@ export default {};
 </script>
 
 <style>
+.list {
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 20px 50px 20px;
+}
 .list__upload {
   display: flex;
   position: relative;
@@ -173,7 +178,7 @@ export default {};
 
 .table__content td,
 .table__content th {
-  border: 1px solid #8C8C8C;
+  border: 1px solid #8c8c8c;
   padding: 5px;
   text-align: center;
 }
@@ -181,5 +186,4 @@ export default {};
 .table__content th {
   border-bottom: 1px solid #593d90;
 }
-
 </style>

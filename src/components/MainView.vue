@@ -3,8 +3,8 @@
     <!-- <List></List> -->
     <!-- <OfficeInspection></OfficeInspection> -->
     <!-- <OnSiteInspection></OnSiteInspection> -->
-    <!-- <LoginModal></LoginModal> -->
-    <IspTest></IspTest>
+    <LoginModal></LoginModal>
+    <!-- <IspTest></IspTest> -->
     
   </div>
 </template>

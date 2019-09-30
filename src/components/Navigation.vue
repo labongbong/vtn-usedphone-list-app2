@@ -4,24 +4,32 @@
       <div class="nav__icon">SK telink</div>
       <div class="nav__list">
         <ul>
-          <li>
-            <i class="fas fa-list"></i>
-            <span>List</span>
-          </li>
-          <li>
-            <i class="fas fa-shoe-prints"></i>
-            <span>On-site Inspection</span>
-          </li>
-          <li>
-            <i class="far fa-building"></i>
-            <span>Office Inspection</span>
-          </li>
+          <router-link to="/list">
+            <li>
+              <i class="fas fa-list"></i>
+              <span>List</span>
+            </li>
+          </router-link>
+          <router-link to="/onsite">
+            <li>
+              <i class="fas fa-shoe-prints"></i>
+              <span>On-site Inspection</span>
+            </li>
+          </router-link>
+          <router-link to="/office">
+            <li>
+              <i class="far fa-building"></i>
+              <span>Office Inspection</span>
+            </li>
+          </router-link>
         </ul>
       </div>
-      <div class="nav__login">
-        <i class="fas fa-sign-in-alt"></i>
-        <span>Login</span>
-      </div>
+      <router-link to="/">
+        <div class="nav__login">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </div>
+      </router-link>
     </nav>
   </div>
 </template>
@@ -54,7 +62,7 @@ export default {};
 }
 
 .nav__list li {
-  margin-left: 40px;
+  margin-left: 50px;
   cursor: pointer;
 }
 
@@ -83,6 +91,7 @@ export default {};
 
 .nav__login {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav i {
