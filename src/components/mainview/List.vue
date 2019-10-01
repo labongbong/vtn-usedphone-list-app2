@@ -37,9 +37,9 @@
       </div>
       <div class="show-list__table">
         <table class="table__content">
-          <th v-for="item in all_Items">{{ item.text }}</th>
-          <tr v-for="device in devices">
-            <td v-for="de in device">{{ de }}</td>
+          <th nowrap v-for="item in all_Items">{{ item.text }}</th>
+          <tr nowrap v-for="device in devices">
+            <td nowrap v-for="de in device">{{ de }}</td>
           </tr>
         </table>
         <div class="table__page"></div>
@@ -238,6 +238,10 @@ export default {
 .show-list {
   position: relative;
   width: 100%;
+}
+
+.show-list__table {
+  overflow-x : auto;
 }
 
 .show-list-top {
