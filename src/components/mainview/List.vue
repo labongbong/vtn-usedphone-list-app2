@@ -22,7 +22,6 @@
           <input class="filters__filter" placeholder="Store" />
           <input class="filters__filter" placeholder="Model Code" />
           <input class="filters__filter" placeholder="Pick-up Date" />
-          <input class="filters__filter" placeholder="File-name" />
         </div>
         <div class="show-list__btns">
           <button class="filters__btn">
@@ -37,55 +36,9 @@
       </div>
       <div class="show-list__table">
         <table class="table__content">
-          <th>Stock No.</th>
-          <th>IMEI1</th>
-          <th>IMEI2</th>
-          <th>Serial No.</th>
-          <th>Store</th>
-          <th>Pick-up Date</th>
-          <th>Warehouse</th>
-          <th>Inspection</th>
-          <th>Manufacturer</th>
-          <th>ModelCode</th>
-          <th>ModelName</th>
+          <th v-for="item in all_Items">{{ item.name }}</th>
           <tr>
-            <td>1</td>
-            <td>123456</td>
-            <td>123456</td>
-            <td>abc123</td>
-            <td>A</td>
-            <td>2019-11-11</td>
-            <td>house1</td>
-            <td>Y</td>
-            <td>samsung</td>
-            <td>SS01</td>
-            <td>Galaxy10</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>123456</td>
-            <td>123456</td>
-            <td>abc123</td>
-            <td>A</td>
-            <td>2019-11-11</td>
-            <td>house1</td>
-            <td>Y</td>
-            <td>LG</td>
-            <td>LG01</td>
-            <td>V50</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>123456</td>
-            <td>123456</td>
-            <td>abc123</td>
-            <td>A</td>
-            <td>2019-11-11</td>
-            <td>house1</td>
-            <td>Y</td>
-            <td>LG</td>
-            <td>LG01</td>
-            <td>V50</td>
+            <td v-for="item in all_Items">{{ item.value }}</td>
           </tr>
         </table>
         <div class="table__page"></div>
@@ -95,7 +48,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    all_Items: [
+      { name: "Stock No.", vlaue: "V20190901070249" },
+      { name: "IMEI 1", value: "123456" },
+      { name: "IMEI 2", value: "123457" },
+      { name: "Modify IMEI", value: "123444" },
+      { name: "Serial No.", value: "abc123" },
+      { name: "Store", value: "FTP Shop" },
+      { name: "Pick-up Date", value: "2019-10-01" },
+      { name: "Wharehouse", value: "house1" },
+      { name: "R-check Grade", value: "A" },
+      { name: "Manufacturer", value: "SAMSUNG" },
+      { name: "ModelCode", value: "SS01" },
+      { name: "ModelName", value: "Galaxy S10" },
+      { name: "on-site Ispection", value: "Y" },
+      { name: "Office Inspection", value: "N" }
+    ]
+  })
+};
 </script>
 
 <style>
