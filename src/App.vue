@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { getUserFromCookie, getAuthFromCookie } from "./utils/cookies.js";
+
 import Navigation from "./components/Navigation.vue";
 import Footer from "./components/Footer.vue";
 import LoginModal from "./components/LoginModal.vue";
@@ -26,7 +28,16 @@ export default {
   },
   data: () => ({
     //
-  })
+  }),
+    // 테스트 용
+  created() {
+    this.$store.commit("SET_USER", {user_name: '곽정신', user_id: '50331'});
+    this.$store.commit("SET_TOKEN", 'AAAAAAA');
+    // if (getUserFromCookie()) {
+    //   this.$store.commit("SET_USER", JSON.parse(getUserFromCookie()));
+    //   this.$store.commit("SET_TOKEN", getAuthFromCookie());
+    // }
+  }
 };
 </script>
 
